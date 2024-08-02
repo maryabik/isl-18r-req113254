@@ -99,7 +99,7 @@ function App() {
                 <div className="  mb-5">
                   <label htmlFor="street" className="  form-label"> Street: </label>
                   <input
-                      type="number"
+                      type="text"
                       name="street"
                       id="street"
                       placeholder="Applicant Name"
