@@ -112,7 +112,7 @@ function App() {
                 <div className="flex flex-wrap   -mx-3">
                   <div className="w-full sm:w-half   px-3">
                     <div className="  mb-5">
-                      <label htmlFor="unit_no" className="  form-label"> Unit Number.: </label>
+                      <label htmlFor="unit_no" className="  form-label"> Unit Number: </label>
                       <input
                           type="text"
                           name="unit_no"
