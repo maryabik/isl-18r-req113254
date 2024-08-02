@@ -119,7 +119,7 @@ function App() {
                       type="text"
                       name="street"
                       id="street"
-                      placeholder="Applicant Name"
+                      placeholder="Street Address"
                       className="  form-input"
                       value={formData.street}
                       onChange={handleChange}
