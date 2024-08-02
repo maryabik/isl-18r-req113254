@@ -65,7 +65,7 @@ function App() {
     // Reload the page after 10 seconds
     setTimeout(() => {
       window.location.reload();
-    }, 10000);
+    }, 20000);
   }
 
 
