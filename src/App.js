@@ -73,6 +73,7 @@ function App() {
                     className="  form-input"
                     value={formData.name}
                     onChange={handleChange}
+                    required
                 />
               </div>
 
@@ -95,18 +96,28 @@ function App() {
               </div>
 
               <div className="  mb-5   pt-3">
-                <label className="form-label   form-label-2">
-                  Address Details
-                </label>
+                <div className="  mb-5">
+                  <label htmlFor="street" className="  form-label"> Street: </label>
+                  <input
+                      type="text"
+                      name="street"
+                      id="street"
+                      placeholder="Applicant Name"
+                      className="  form-input"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                  />
+                </div>
                 <div className="flex flex-wrap   -mx-3">
                   <div className="w-full sm:w-half   px-3">
                     <div className="  mb-5">
-                      <label htmlFor="street" className="  form-label"> Street: </label>
+                      <label htmlFor="unit_no" className="  form-label"> Unit Number.: </label>
                       <input
                           type="text"
-                          name="street"
-                          id="street"
-                          placeholder="Street"
+                          name="unit_no"
+                          id="unit_no"
+                          placeholder="unit number"
                           className="  form-input"
                           value={formData.street}
                           onChange={handleChange}
@@ -119,12 +130,12 @@ function App() {
                       <input
                           type="text"
                           name="city"
-                            id="city"
-                            placeholder="Enter city"
-                            className="  form-input"
+                          id="city"
+                          placeholder="Enter city"
+                          className="  form-input"
                           value={formData.city}
                           onChange={handleChange}
-                        />
+                      />
                     </div>
                   </div>
                   <div className="w-full sm:w-half   px-3">
@@ -136,7 +147,7 @@ function App() {
                           value={formData.province}
                           onChange={handleChange}
                       >
-                        <option value=" "> -Select Province- </option>
+                        <option value=" "> -Select Province-</option>
                         <option value="AB">Alberta</option>
                         <option value="BC">British Columbia</option>
                         <option value="MB">Manitoba</option>
@@ -228,6 +239,7 @@ function App() {
               {
                 show ?
                     <div className="mb-5">
+                      <label htmlFor="nationality" className="  form-label"> Nationality: </label>
                       <Select
                           name="nationality"
                           options={options}
