@@ -42,16 +42,31 @@ function App() {
 };
 
   const changeHandler = nation => {
-    setNation(nation)
+    setNation(nation);
+
+    //add selected nation to the form
+    setFormData((prevData) => ({
+      ...prevData,
+      nationality: nation.label
+    }));
   }
 
 
   const formSubmitHandler = (values) => {
     values.preventDefault();
-    setFormData(prevState => ({
-      ...prevState,
-      nationality: nation.label,
-    }));
+
+    // Only update nationality to null if the checkbox is not checked
+    if(checkBoxRef.current.checked !== true){
+      setFormData((prevData) => ({
+        ...prevData,
+        nationality: null
+      }));
+    }
+
+    // Reload the page after 10 seconds
+    setTimeout(() => {
+      window.location.reload();
+    }, 10000);
   }
 
 
