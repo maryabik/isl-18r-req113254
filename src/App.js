@@ -44,6 +44,8 @@ function App() {
   const changeHandler = nation => {
     setNation(nation);
 
+
+
     //add selected nation to the form
     setFormData((prevData) => ({
       ...prevData,
