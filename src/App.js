@@ -22,6 +22,7 @@ function App() {
     name: '',
     marital_status: '',
     street:'',
+    unit_no:'',
     city:'',
     province: '',
     postal_code: '',
@@ -51,7 +52,6 @@ function App() {
       ...prevState,
       nationality: nation.label,
     }));
-    console.log(formData);
   }
 
 
@@ -99,12 +99,12 @@ function App() {
                 <div className="  mb-5">
                   <label htmlFor="street" className="  form-label"> Street: </label>
                   <input
-                      type="text"
+                      type="number"
                       name="street"
                       id="street"
                       placeholder="Applicant Name"
                       className="  form-input"
-                      value={formData.name}
+                      value={formData.street}
                       onChange={handleChange}
                       required
                   />
@@ -119,7 +119,7 @@ function App() {
                           id="unit_no"
                           placeholder="unit number"
                           className="  form-input"
-                          value={formData.street}
+                          value={formData.unit_no}
                           onChange={handleChange}
                       />
                     </div>
@@ -214,6 +214,8 @@ function App() {
                 <label htmlFor="phone_number" className="  form-label"> Canadian Phone Number: </label>
                 <input
                     type="phone"
+                    min="0" // Optional: Set minimum value
+                    step="9"
                     name="phone_number"
                     id="phone_number"
                     placeholder="Enter your canadian phone number"
