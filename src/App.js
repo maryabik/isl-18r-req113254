@@ -36,15 +36,12 @@ function App() {
     const { name, value } = e.target;
     setFormData(prevState => ({
         ...prevState,
-      // nationality: nation.label,
-        [name]: value,
+        [name]: value
   }));
 };
 
   const changeHandler = nation => {
     setNation(nation);
-
-
 
     //add selected nation to the form
     setFormData((prevData) => ({
@@ -86,7 +83,7 @@ function App() {
                     type="text"
                     name="name"
                     id="name"
-                    placeholder="Applicant Name"
+                    placeholder="Enter your name"
                     className="  form-input"
                     value={formData.name}
                     onChange={handleChange}
@@ -119,7 +116,7 @@ function App() {
                       type="text"
                       name="street"
                       id="street"
-                      placeholder="Street Address"
+                      placeholder="Enter street address"
                       className="  form-input"
                       value={formData.street}
                       onChange={handleChange}
@@ -134,7 +131,7 @@ function App() {
                           type="text"
                           name="unit_no"
                           id="unit_no"
-                          placeholder="unit number"
+                          placeholder="Enter unit number"
                           className="  form-input"
                           value={formData.unit_no}
                           onChange={handleChange}
@@ -188,7 +185,7 @@ function App() {
                           type="text"
                           name="postal_code"
                           id="postal_code"
-                          placeholder="Postal Code"
+                          placeholder="Enter postal Code"
                           className="  form-input"
                           value={formData.postal_code}
                           onChange={handleChange}
