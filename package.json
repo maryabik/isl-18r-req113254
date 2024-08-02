@@ -15,8 +15,8 @@
     "web-vitals": "^2.1.4"
   },
   "engines": {
-    "node": ">=14.0.0 <15.0.0",
-    "npm": ">=6.0.0"
+    "node": "^18.17.0 >=20.5.0",
+    "npm": ">10.8.2"
   },
   "scripts": {
     "start": "PORT=8005 react-scripts start",
